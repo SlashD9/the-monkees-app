@@ -4,11 +4,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Design
 
-Design was done in Mockups, using a simple yet elegant framework, bootstrap. This allows me to configure the app as I did in my Mockup Templates.
+The Main design was done in Balsamiq Mockups. I used a simple yet elegant framework, bootstrap for my project as it is a great tool for pre-configured css layouts. This allows me to configure the app as I did in my Mockup Templates.
 
 ## Additions to Angular CLI
 
-To allow bootstrap to be available within the Angular app I NPM installed bootstrap 4, jquery and tether to allow me to use that framework. `npm install bootstrap@4.0.0alpha.6 jquery tether --save`
+To allow bootstrap to be available within the Angular app I NPM installed bootstrap 4, jquery and tether to allow me to use that framework. 
+`npm install bootstrap@4.0.0alpha.6 jquery tether --save`
 
 ## More here......
 
