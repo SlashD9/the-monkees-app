@@ -13,6 +13,7 @@ import { DavyComponent } from './components/davy/davy.component';
 import { MickyComponent } from './components/micky/micky.component';
 import { MichaelComponent } from './components/michael/michael.component';
 import { PeterComponent } from './components/peter/peter.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   { path: 'davy', component: DavyComponent, pathMatch: 'full'},
   { path: 'micky', component: MickyComponent, pathMatch: 'full'},
   { path: 'michael', component: MichaelComponent, pathMatch: 'full'},
-  { path: 'peter', component: PeterComponent, pathMatch: 'full'}
+  { path: 'peter', component: PeterComponent, pathMatch: 'full'},
+  { path: 'contact', component:ContactComponent, pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -38,7 +40,8 @@ const appRoutes: Routes = [
     DavyComponent,
     MickyComponent,
     MichaelComponent,
-    PeterComponent
+    PeterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
