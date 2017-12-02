@@ -2,13 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
-## Development server
+## Design
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Design was done in Mockups, using a simple yet elegant framework, bootstrap. This allows me to configure the app as I did in my Mockup Templates.
 
-## Code scaffolding
+## Additions to Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To allow bootstrap to be available within the Angular app I NPM installed bootstrap 4, jquery and tether to allow me to use that framework. `npm install bootstrap@4.0.0alpha.6 jquery tether --save`
+
+## More here......
 
 ## Build
 
