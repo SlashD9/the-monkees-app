@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Design
 
-The Main design was done in Balsamiq Mockups. I used a simple yet elegant framework, bootstrap for my project as it is a great tool for pre-configured css layouts. This allows me to configure the app as I did in my Mockup Templates.
+The Main design was done in Balsamiq Mockups. I used a simple yet elegant framework for my project, bootstrap. This is a great tool for pre-configured css layouts. This allows me to configure the app as I did in my Mockup Templates.
 
 ## Additions to Angular CLI
 
