@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmailValidator } from '@angular/forms/src/directives/validators';
 
 @Component({
   selector: 'app-contact',
@@ -10,6 +11,7 @@ export class ContactComponent implements OnInit {
   email = '';
   date = '';
   event = '';
+
   constructor() { }
 
   ngOnInit() {
