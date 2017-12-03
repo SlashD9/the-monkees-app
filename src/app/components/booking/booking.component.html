@@ -16,8 +16,11 @@
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" class="form-control" [(ngModel)] ="booking.email" name="email" placeholder="you@example.com" #bookingEmail="ngModel" required>
+            <input type="email" class="form-control" [(ngModel)] ="booking.email" name="email" placeholder="you@example.com" #bookingEmail="ngModel" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
             <div *ngIf="bookingEmail.errors?.required && bookingEmail.touched" class="alert alert-danger">Email is Required</div>
+            <div  *ngIf="bookingEmail.errors && bookingEmail.errors.pattern" class="alert alert-danger">
+                Email is invalid
+            </div>
           </div>
           <div class="form-group">
             <label>Date</label>
