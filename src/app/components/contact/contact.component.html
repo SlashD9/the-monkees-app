@@ -1,3 +1,32 @@
-<p>
-  contact works!
-</p>
+<div class="row">
+  <div class="col-lg-8 col-12">
+    <h1>Booking Form</h1>
+    <form (submit)="onSubmit()">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" [(ngModel)] ="name" name="name">
+        <br>
+        <label>Email</label>
+        <input type="email" class="form-control" [(ngModel)] ="email" name="email" placeholder="you@example.com">
+        <br>
+        <label>Date</label>
+        <input type="date" class="form-control" [(ngModel)] ="date" name="date">
+      </div>
+      <br>
+      <div>
+          <label class="mr-sm-2" for="inlineFormCustomSelect">Event Type</label>
+          <br>
+          <select class="custom-select mb-2 mr-sm-2 mb-sm-0" [(ngModel)] = "event" name="event" id="inlineFormCustomSelect">
+            <option selected>Choose...</option>
+            <option value="Small Venue">Small Venue 300 or less</option>
+            <option value="Medium Venue">Medium Venue 1000 or less</option>
+            <option value="Stadium Venue">Stadium Venue 1000 or more</option>
+            <option value="Festival">Festival</option>
+            <option value="Wedding">Wedding</option>
+          </select>
+      </div>
+      <br>
+      <input type="submit" class="btn btn-success" value="Submit">
+    </form>
+  </div>
+</div>
