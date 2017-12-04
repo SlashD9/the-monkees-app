@@ -23,8 +23,6 @@ export class BookingComponent implements OnInit {
     locations: []
   };
   constructor(public dataService: DataService) {
-    console.log(this.dataService.getBookedDates());
-    console.log(this.dataService.bookedDate[0]);
    }
 
   ngOnInit() {
@@ -32,7 +30,6 @@ export class BookingComponent implements OnInit {
 
   onSubmit({value, valid}) {
     if (valid) {
-      console.log(this.dataService.getBookedDates());
       for (const i in this.dataService.bookedDate) {
         if (this.booking.date !== this.dataService.bookedDate[i]) {
           this.validation = 'Checking Date';
