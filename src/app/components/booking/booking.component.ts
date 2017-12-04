@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmailValidator } from '@angular/forms/src/directives/validators';
 import { FormsModule, Validators } from '@angular/forms';
+import { DataService } from '../../Services/data.services';
 
 @Component({
   selector: 'app-booking',
@@ -8,6 +9,8 @@ import { FormsModule, Validators } from '@angular/forms';
   styleUrls: ['./booking.component.css']
 })
 export class BookingComponent implements OnInit {
+  i: number;
+  bookedDate: string[];
   validation = '';
   booking = {
     name: '',
@@ -19,20 +22,32 @@ export class BookingComponent implements OnInit {
     location: '',
     locations: []
   };
-  constructor() { }
+  constructor(public dataService: DataService) {
+    console.log(this.dataService.getBookedDates());
+    console.log(this.dataService.bookedDate[0]);
+   }
 
   ngOnInit() {
   }
+
   onSubmit({value, valid}) {
     if (valid) {
-    this.validation = 'Form is not valid';
-    console.log(value);
-    this.booking.dates.push(this.booking.date);
-    this.booking.locations.push(this.booking.location);
-    this.booking.names.push(this.booking.name);
+      console.log(this.dataService.getBookedDates());
+      for (const i in this.dataService.bookedDate) {
+        if (this.booking.date !== this.dataService.bookedDate[i]) {
+          this.validation = 'Checking Date';
+         } else {
+          this.validation = 'Booked up for this Day, \n Please try a different Date...';
+          return;
+         }
+      }
+      this.validation = '';
+      this.booking.dates.push(this.booking.date);
+      this.booking.locations.push(this.booking.location);
+      this.booking.names.push(this.booking.name);
     } else {
       this.validation = 'Form is not valid';
     }
-  }
+    }
 
 }

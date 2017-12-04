@@ -17,6 +17,7 @@ import { PeterComponent } from './components/peter/peter.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ToursComponent } from './components/tours/tours.component';
 import { BookingComponent } from './components/booking/booking.component';
+import { DataService } from './Services/data.services';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -55,7 +56,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
