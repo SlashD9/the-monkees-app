@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, Validators } from '@angular/forms';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,6 +19,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ToursComponent } from './components/tours/tours.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { DataService } from './Services/data.services';
+import { CarouselComponent } from 'ngx-bootstrap/carousel/carousel.component';
+import { AlertModule } from 'ngx-bootstrap';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -54,7 +57,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    CarouselModule.forRoot(),
+    AlertModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

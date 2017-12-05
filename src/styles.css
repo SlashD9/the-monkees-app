@@ -6,3 +6,10 @@
     width: 80%;
     text-align: center;
 }
+.main-image-carosel {
+    max-height: 500px;
+    min-height: 450px;
+}
+.text-center {
+    text-align: center;
+}
