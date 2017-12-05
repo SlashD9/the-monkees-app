@@ -21,6 +21,10 @@ import { BookingComponent } from './components/booking/booking.component';
 import { DataService } from './Services/data.services';
 import { CarouselComponent } from 'ngx-bootstrap/carousel/carousel.component';
 import { AlertModule } from 'ngx-bootstrap';
+import { VgCoreModule } from 'videogular2/core';
+import { VgControlsModule } from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -52,14 +56,16 @@ const appRoutes: Routes = [
     PeterComponent,
     ContactComponent,
     ToursComponent,
-    BookingComponent
+    BookingComponent,
+
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
     CarouselModule.forRoot(),
-    AlertModule
+    AlertModule,
+    VgCoreModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
