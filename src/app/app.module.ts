@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, Validators } from '@angular/forms';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -65,7 +66,8 @@ const appRoutes: Routes = [
     FormsModule,
     CarouselModule.forRoot(),
     AlertModule,
-    VgCoreModule
+    VgCoreModule,
+    ModalModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
