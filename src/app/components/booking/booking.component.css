@@ -4,3 +4,6 @@ label {
 .jumbotron-margin-bottom {
     margin-bottom: 300px;
 }
+.success {
+    margin: 0, 5px, 0, 5px;
+}

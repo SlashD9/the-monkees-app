@@ -26,6 +26,9 @@ import { VgCoreModule } from 'videogular2/core';
 import { VgControlsModule } from 'videogular2/controls';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
 import {VgBufferingModule} from 'videogular2/buffering';
+import { BsModalService } from 'ngx-bootstrap/modal/bs-modal.service';
+import { ComponentLoaderFactory } from 'ngx-bootstrap/component-loader/component-loader.factory';
+import { PositioningService } from 'ngx-bootstrap/positioning/positioning.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -69,7 +72,12 @@ const appRoutes: Routes = [
     VgCoreModule,
     ModalModule
   ],
-  providers: [DataService],
+  providers: [
+    DataService,
+    BsModalService,
+    ComponentLoaderFactory,
+    PositioningService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
