@@ -1,6 +1,7 @@
-.jumbotron {
-    background-color: #343a40;
-}
+
 h1 {
     color: rgba(255, 255, 255, 0.75);
+}
+.jumbotron-margin-bottom {
+    margin-bottom: 300px;
 }
