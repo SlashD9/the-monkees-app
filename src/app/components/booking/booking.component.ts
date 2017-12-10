@@ -78,6 +78,15 @@ export class BookingComponent implements OnInit {
         case 'Medium Venue':
           this.booking.price = '1500';
           break;
+        case 'Stadium Venue':
+          this.booking.price = '4000';
+          break;
+        case 'Festival':
+          this.booking.price = '4500';
+          break;
+        case 'Wedding':
+          this.booking.price = '1300';
+          break;
           default:
           this.booking.price = '';
       }
