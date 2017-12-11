@@ -58,7 +58,7 @@ export class BookingComponent implements OnInit {
   onSubmit({value, valid}) {
     if (valid) {
       for (const i in this.dataService.bookedDate) {
-        if (this.booking.date === this.dataService.bookedDate[i]) {
+        if (this.booking.date === this.dataService.bookedDate[i].date) {
           this.validation = 'Date not availible';
           this.successMSG = 'Please choose another date';
           this.finish = false;
