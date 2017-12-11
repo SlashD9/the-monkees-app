@@ -3,7 +3,7 @@
     <div class="jumbotron text-center">
       <h1 class="text-danger">Upcoming Gigs</h1>
       <div class="table-responsive">
-        <table class="table">
+      <!--  <table class="table">
           <thead>
             <tr>
               <th>Date</th>
@@ -50,7 +50,26 @@
               <td>On Sale 25/01/2018</td>
             </tr>
           </tbody> 
-        </table>  
+        </table>  -->
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>location</th>
+              <th>Venue</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let i of this.dataService.bookedDate">
+                <td>{{ i.date }}</td>
+                <td>{{ i.location }}</td>
+                <td>{{ i.venue }}</td>
+                <td>{{ i.availability }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>  
   </div>  

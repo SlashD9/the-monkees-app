@@ -15,7 +15,7 @@ export class BookingComponent implements OnInit {
   modalRef: BsModalRef;
   modalRef2: BsModalRef;
   i: number;
-  bookedDate: string[];
+  bookedDate: any[];
   validation = '';
   successMSG = '';
   finish = true;

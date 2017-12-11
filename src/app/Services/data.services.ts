@@ -22,25 +22,25 @@ export class DataService {
                 date: '2017-12-25',
                 location: 'North Pole',
                 venue: 'Santa\'s Grotto',
-                availabilty: 'Available'
+                availability: 'Available'
             },
             {
                 date: '2018-01-10',
                 location: 'London, England',
                 venue: 'O2 Arena',
-                availabilty: 'Some Tickets Left'
+                availability: 'Some Tickets Left'
             },
             {
                 date: '2018-01-20',
                 location: 'Frankfurt, Germany',
                 venue: 'Commerzbank Arena',
-                availabilty: 'On Sale 01/01/2018'
+                availability: 'On Sale 01/01/2018'
             },
             {
                 date: '2018-02-18',
                 location: 'Amsterdam, Netherlands',
                 venue: 'Amsterdam Arena',
-                availabilty: 'On Sale 25/01/2018'
+                availability: 'On Sale 25/01/2018'
             }
         ];
     }
