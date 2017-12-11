@@ -2,7 +2,7 @@
     <h4>Book an event</h4>
     <p>Have you got an event that you'd like us to attend</p>
 
-    <button type="button" class="btn btn-primary" (click)="openModal(template)">Book Now</button>
+    <button type="button" class="btn btn-primary" (click)="openModal(template); refreshBookedDates()">Book Now</button>
     
    <ng-template #template>
      <div class="modal-header">
@@ -27,6 +27,14 @@
               <input type="text" class="form-control" [(ngModel)] ="booking.location" name="location" #bookingLocation="ngModel" required>
               <div *ngIf="bookingLocation.errors?.required && bookingLocation.touched" class="alert alert-danger">Location is Required</div>
             </div>
+            
+            <!-- Adding new input Field -->
+            <div class="form-group">
+                <label>Venue name</label>
+                <input type="text" class="form-control" [(ngModel)] ="booking.venue" name="venue" #bookingVenue="ngModel" required>
+                <div *ngIf="bookingVenue.errors?.required && bookingVenue.touched" class="alert alert-danger">Venue is Required</div>
+              </div>
+
             <div class="form-group">
               <label>Email</label>
               <input type="email" class="form-control" [(ngModel)] ="booking.email" name="email" placeholder="you@example.com" #bookingEmail="ngModel" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
@@ -72,48 +80,12 @@
                   <h1>{{ validation }}</h1>
                   <p class="success">{{ successMSG }}</p>
                 </div>
-                <div *ngIf="bookingInfo" class="container text-center">
-                    <div class="row">
-                      <div class="col-12 col-lg-12" style="width:100%">
-                        <ul class="list-group">
-                          <li class="list-group-item" *ngFor="let location of booking.locations" >
-                              <h3>Location:  </h3>
-                              <h4>&nbsp; {{ location }}</h4>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="col-12 col-lg-12 text-center" style="width:100%">
-                          <ul class="list-group">
-                            <li class="list-group-item" *ngFor="let date of booking.dates">
-                              <h3>Venue Type:</h3>
-                              <h4>&nbsp; {{ booking.event }}</h4>
-                            </li>
-                          </ul>
-                        </div>  
-                      <div class="col-12 col-lg-12 text-center" style="width:100%">
-                        <ul class="list-group">
-                          <li class="list-group-item" *ngFor="let date of booking.dates">
-                            <h3>Date:</h3>
-                            <h4>&nbsp; {{ date }}</h4>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="col-12 col-lg-12 text-center" style="width:100%">
-                          <ul class="list-group">
-                            <li class="list-group-item" *ngFor="let date of booking.dates">
-                              <h3>Price: </h3>
-                              <h4>&nbsp; ${{ booking.price }}</h4>
-                            </li>
-                          </ul>
-                        </div>
-                    </div>
                     <br><br>
                     <div class="col-12 col-lg-12 text-center" *ngIf="finish">
                       <a link="#" routerLink="/contact">
-                        <button *ngIf="modalRef" type="button" class="btn btn-danger" (click)="closeAllModal()" >Finished</button>
+                        <button *ngIf="modalRef" type="button" class="btn btn-danger" (click)="closeAllModal(); clearInputs()" >Finished</button>
                       </a>
                     </div>
-                  </div>
                   <br><br>
               </ng-template>
 

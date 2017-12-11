@@ -48,4 +48,13 @@ export class DataService {
     getBookedDates() {
         return this.bookedDate;
     }
+
+    getBookings(dateInput, locationInput, venueInput, availabilityInput) {
+            this.bookedDate.push({
+                date: dateInput,
+                location: locationInput,
+                venue: venueInput,
+                availability: availabilityInput
+            });
+    }
 }
