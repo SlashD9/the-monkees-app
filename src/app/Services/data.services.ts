@@ -57,4 +57,13 @@ export class DataService {
                 availability: availabilityInput
             });
     }
+
+    storeBookings() {
+        if (localStorage.getItem('bookedDate') === null) {
+            this.bookedDate = [];
+        }else {
+
+        }
+
+    }
 }

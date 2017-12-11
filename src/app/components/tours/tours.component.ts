@@ -14,7 +14,6 @@ export class ToursComponent implements OnInit {
   constructor(public dataService: DataService) { }
 
   ngOnInit() {
-    console.log(this.dataService.bookedDate[0].date);
   }
 
 }

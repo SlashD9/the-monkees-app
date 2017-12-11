@@ -107,10 +107,6 @@ export class BookingComponent implements OnInit {
           this.booking.price = '';
       }
 
-     /* this.booking.dates.push(this.booking.date);
-      this.booking.locations.push(this.booking.location);
-      this.booking.names.push(this.booking.name);
-      */
       this.dataService.getBookings(
         this.booking.date,
         this.booking.location,
