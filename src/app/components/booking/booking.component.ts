@@ -16,6 +16,7 @@ export class BookingComponent implements OnInit {
   modalRef2: BsModalRef;
   i: number;
   bookedDate: any[];
+  getBookings: any;
   validation = '';
   successMSG = '';
   finish = true;
@@ -30,6 +31,7 @@ export class BookingComponent implements OnInit {
     event: '',
     location: '',
     locations: [],
+    venue: '',
     price: '0'
   };
   constructor(public dataService: DataService, private modalService: BsModalService) {
@@ -53,6 +55,20 @@ export class BookingComponent implements OnInit {
       this.closeFirstModal();
     }
   ngOnInit() {
+  }
+
+  refreshBookedDates() {
+    this.dataService.getBookedDates();
+  }
+
+  clearInputs() {
+    this.booking.date = '';
+    this.booking.email = '';
+    this.booking.event = '';
+    this.booking.location = '';
+    this.booking.name = '';
+    this.booking.venue = '';
+
   }
 
   onSubmit({value, valid}) {
@@ -91,10 +107,11 @@ export class BookingComponent implements OnInit {
           this.booking.price = '';
       }
 
-      this.booking.dates.push(this.booking.date);
-      this.booking.locations.push(this.booking.location);
-      this.booking.names.push(this.booking.name);
-      console.log(this.booking.event);
+      this.dataService.getBookings(
+        this.booking.date,
+        this.booking.location,
+        this.booking.venue,
+        'Just Added' );
     } else {
       this.validation = 'Form is not valid';
     }
