@@ -30,6 +30,7 @@ import { BsModalService } from 'ngx-bootstrap/modal/bs-modal.service';
 import { ComponentLoaderFactory } from 'ngx-bootstrap/component-loader/component-loader.factory';
 import { PositioningService } from 'ngx-bootstrap/positioning/positioning.service';
 import { EmailComponent } from './components/email/email.component';
+import { SocialComponent } from './components/social/social.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -63,6 +64,7 @@ const appRoutes: Routes = [
     ToursComponent,
     BookingComponent,
     EmailComponent,
+    SocialComponent,
 
   ],
   imports: [
