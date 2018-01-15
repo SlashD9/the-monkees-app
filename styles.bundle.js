@@ -89,7 +89,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n* {\r\n    font-family: 'Ranchers', cursive;\r\n}\r\n.img-loading {\r\n    width: 80%;\r\n    text-align: center;\r\n}\r\n.bg { \r\n    background-image: url(\"https://https://slashd9.github.io/the-monkees-app/assets/images/backdrop.jpg\");\r\n    height: 100%; \r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n}\r\n.main-image-carosel {\r\n    max-width: 400px;\r\n    width: auto;\r\n    height: auto;\r\n    margin: 0 auto;\r\n}\r\n.text-center {\r\n    text-align: center;\r\n}\r\n.main-video {\r\n    min-width: 400px;\r\n    width: 100%;\r\n    height: 100%;\r\n    margin: 0 auto;\r\n    display: block;\r\n}\r\nh1 {\r\n    color: #FF0002;\r\n}\r\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n* {\r\n    font-family: 'Ranchers', cursive;\r\n}\r\n.img-loading {\r\n    width: 80%;\r\n    text-align: center;\r\n}\r\n.bg { \r\n    background-image: url(\"https://slashd9.github.io/the-monkees-app/assets/images/backdrop.jpg\");\r\n    height: 100%; \r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n}\r\n.main-image-carosel {\r\n    max-width: 400px;\r\n    width: auto;\r\n    height: auto;\r\n    margin: 0 auto;\r\n}\r\n.text-center {\r\n    text-align: center;\r\n}\r\n.main-video {\r\n    min-width: 400px;\r\n    width: 100%;\r\n    height: 100%;\r\n    margin: 0 auto;\r\n    display: block;\r\n}\r\nh1 {\r\n    color: #FF0002;\r\n}\r\n", ""]);
 
 // exports
 
