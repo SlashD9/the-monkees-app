@@ -1,6 +1,6 @@
 # The Monkees App
 
-The Monkees App is a website based on the very popular band from the 1960's/70's. It has been designed in such a way using images and font types that would be consistant with the 1960's/70's but still have a very modern layout.
+The Monkees App is a website based on the very popular band from the 1960's/70's. It has been designed in such a way using images and font types that would be consistant with this era but still have a very modern layout.
 
 ## The App
 
@@ -29,7 +29,7 @@ To struture the app
 Bootstrap and Jquery along with some vanilla css
 ```
 
-To build the contacts component
+Contacts component
 ```
 FormsModule, Validators, ModalModule, DataService, AlertModule, BsModalService, ComponentLoaderFactory, PositioningService
 ```
@@ -53,35 +53,45 @@ HTML5
 ### How to navigate through the App
 
 NavBar
+
 Navbar is taken from the bootstrap examples layout with a few modifications to allow the menu buttons float to the right of the screen and keep the logo to the left of the screen.
 The menu buttons use the google font family Ranchers this is in keeping with the 60s/70s theme.
 
 The Home page
+
 Welcomes you to the site by displaying a large Monkees logo along with band photos, assuring you that you have infact reached the correct page for the band and not a wiki page about monkeys in the wild.
 
 The Band Page
+
 Band page is simple but informitave, showing a band photo in which the band members are confused as to which camera they should be looking at and a detailed description of the band taken from wikipedia. Below this is again the individual band member photos and names which then link to specific information about each band member when clicked on.
 
 Band Members
+
 Band member page shows the band member photo and name in the top left of the display followed by specific information (also taken from wikipedia) about each band member.
 
 The Music Page
+
 This page consists of 4 album covers associated with each of the songs. It allows the visitor to visually see what the song is and using the HTML5 audio tag and the bootstrap class of "audio-controls-size" displays a simple play button, Mute and the ability to download the song.
 
 The Video Page
+
 A simple page alowing the visitor to view the official and badly mimed video of Daydream Believer an iconic song released in 1968 by The Monkees.
 This page allows easy access to video controls for the Video using the standard HTML5 video tag.
 
 The Photos page
+
 Photos takes use of the ngx-bootstrap module installed and allows a collection of images to be shown in a carousel format on screen. As standard it automatically cycles throught the photos but it also allows the viewer to skip to the next image, go back to the previous image or by selecting the slide from the image strip.
 
 The Tours Page
+
 Using a simple table and wrapping it in bootstrap I have displayed the next Upcoming gigs shown by date location venue and the availiblilty of tickets. The inforation is retireved from the data.service and shows the information stored in an array. By Linking this table to a data.service I was able to add any information stored in the array from the booking component and display it in the tours table. Making use of the single page app which allows me to temporarily display the newly booked gig within in the table. Of course once the page is relaoded it is no longer shown.
 
 The Contact Page.
+
 This page consists of three seperate components the booking component, the email component and the social component.
 
 Booking Component
+
 Perhaps the most complicated and most fun to create and contrary to advice giving from my mentor I started this component very early on in the project build. 
 It uses bootstrap modal windows and Angualar forms module, Angualar Form/ email validators and DataService.
 To Use:
